@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuItems from "../components/MenuItems.astro";
+
+import {
+  itemsPizza,
+  itemsBurgers,
+  itemsPasta,
+  itemsCarnes,
+  itemsCalzone,
+  itemsRaciones,
+  itemsFajitas,
+  itemsPostres,
+  itemsBebidas,
+} from "../data/menuData.js";
+---
+
+<Layout title="Artea-Carta">
+  <section class="bg-menu-texture py-16">
+    <div class="container mx-auto px-4 text-center text-white">
+      <!-- Título de la sección -->
+
+      <h2 class="text-4xl font-bold mb-4">Nuestra Carta</h2>
+      <!-- Contenedor para el logo y el texto -->
+      <div class="flex justify-center items-center space-x-4 mb-12">
+        <!-- Logo -->
+        <img src="/artea-colookr.png" alt="Logo" class="h-24 w-auto" />
+        <!-- Texto "On Egin" -->
+        <h2 class="text-4xl font-bold text-rojo">On Egin</h2>
+        <a
+          href="/carta_artea.pdf"
+          download
+          class="text-verdea text-xs font-bold py-2 px-4 hover:text-green-600 transition"
+        >
+          Descargar
+          <img
+            src="/pdf-svgrepo-com.svg"
+            alt="pdf"
+            class="h-8 w-auto ml-2 inline-block"
+          /></a
+        >
+      </div>
+
+      <MenuItems sectionName="PIZZAK / PIZZAS" items={itemsPizza} />
+      <MenuItems
+        sectionName="HANBURGESAK PATATEKIN / HAMBURGUESAS CON PATATAS"
+        items={itemsBurgers}
+      />
+      <MenuItems
+        sectionName="ENTSALADAK ETA PASTAK / ENSALADAS Y PASTAS"
+        items={itemsPasta}
+      />
+      <MenuItems sectionName="HARAGIAK / CARNES" items={itemsCarnes} />
+      <MenuItems sectionName="CALZONE ARTEA" items={itemsCalzone} />
+      <MenuItems sectionName="ERRAZIOAK / RACIONES" items={itemsRaciones} />
+      <MenuItems sectionName="FAJITAK / FAJITAS" items={itemsFajitas} />
+      <MenuItems
+        sectionName="POSTRESAZKENBURUKOAK / POSTRES CASEROS"
+        items={itemsPostres}
+      />
+      <MenuItems sectionName="EDARIAK / BEBIDAS" items={itemsBebidas} />
+    </div>
+  </section>
+</Layout>

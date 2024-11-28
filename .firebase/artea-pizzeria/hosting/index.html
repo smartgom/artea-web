@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" type="image/ico" sizes="48x48" href="/favicon_artea.ico" type="image/x-icon"><!-- 
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../src/css/flaticon.css" />
+    <link rel="stylesheet" href="../../src/css/icomoon.css" />--><!--  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../../src/css/style.css" />--><title>Pizzería Artea</title><link rel="stylesheet" href="/_astro/contacto.BcLY-pf4.css">
+<link rel="stylesheet" href="/_astro/index.DuzlYW0I.css"><script type="module" src="/_astro/hoisted.BLzFwEXg.js"></script></head> <body> <header> <nav class="bg-black text-white"> <div class="container mx-auto px-4 flex items-center justify-between h-auto"> <!-- Logo --> <a href="/" class="text-xl font-bold"> <img src="/logo-artea.png" alt="Logo" class="h-24 w-auto"> </a> <!-- Botón del menú móvil --> <button id="menu-toggle" class="block md:hidden text-gray-300 hover:text-verdea focus:outline-none"> <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path> </svg> </button> <!-- Links del menú --> <div id="menu" class="hidden md:flex space-x-4 text-sm font-medium"> <a class="block w-full py-2 hover:text-gray-400 text-lg text-verdea font-bold" href="/"> Inicio </a><a class="block w-full py-2 hover:text-gray-400 text-lg " href="/menu"> Menú </a><a class="block w-full py-2 hover:text-gray-400 text-lg " href="/contacto"> Contacto </a> </div> </div> <!-- Menú móvil desplegable --> <div id="mobile-menu" class="md:hidden hidden flex flex-col items-start bg-gray-700 text-sm font-medium space-y-2 px-4 pb-4"> <a class="block w-full py-2 hover:text-verdea" href="/"> Inicio </a><a class="block w-full py-2 hover:text-verdea" href="/menu"> Menú </a><a class="block w-full py-2 hover:text-verdea" href="/contacto"> Contacto </a> </div> </nav> </header>  <main>  <p class="text-9xl"></p> <div class="swiper w-full h-[500px] relative"> <div class="swiper-wrapper"> <div class="swiper-slide relative"> <img src="/porciones2.jpg" alt="porciones" class="w-full h-full object-cover"> <!-- Texto centrado en columna --> <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black/30"> <h3 class="text-white text-2xl font-bold drop-shadow-lg"> Venta de porciones y raciones </h3> <p class="text-white text-lg drop-shadow-md mt-2"> Servimos porciones de nuestras pizzas más vendidas sueltas. </p> </div> </div><div class="swiper-slide relative"> <img src="/pasta_vegana.jpg" alt="vegana" class="w-full h-full object-cover"> <!-- Texto centrado en columna --> <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black/30"> <h3 class="text-white text-2xl font-bold drop-shadow-lg"> Opciones veganas </h3> <p class="text-white text-lg drop-shadow-md mt-2"> Tenemos una buena variedad de pastas y pizzas veganas en nuestra carta. </p> </div> </div><div class="swiper-slide relative"> <img src="/burger-1.jpg" alt="hamburguesa" class="w-full h-full object-cover"> <!-- Texto centrado en columna --> <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black/30"> <h3 class="text-white text-2xl font-bold drop-shadow-lg"> Hamburguesas </h3> <p class="text-white text-lg drop-shadow-md mt-2"> Prueba nuestras hamburguesas con la carne de la mejor calidad. </p> </div> </div> </div> <!-- Botones de navegación --> <div class="swiper-button-next"></div> <div class="swiper-button-prev"></div> <!-- Paginación --> <div class="swiper-pagination"></div> </div>  <!-- 
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    {
+      slides.map((slide, index) => (
+        <div
+          class={`carousel-item ${index === 0 ? "active" : ""}`}
+          data-bs-interval={slide.interval}
+        >
+          <img src={slide.src} class="d-block w-100" alt={slide.alt} />
+          <div class="carousel-caption text-shadow">
+            <h3>{slide.title}</h3>
+            <p>{slide.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> --> <!-- <style>
+  .carousel-inner {
+    height: 300px !important; /* Altura fija para el carrusel */
+  }
+
+  .carousel-inner img {
+    width: 100% !important; /* Ocupa todo el ancho */
+    height: 300px !important; /* Ajusta la altura */
+    object-fit: cover !important; /* Recorta la imagen para que se ajuste al contenedor */
+  }
+
+  .text-shadow {
+    color: white; /* Texto blanco */
+    text-shadow:
+      1px 1px 2px rgba(0, 0, 0, 0.6),
+      -1px -1px 2px rgba(0, 0, 0, 0.4);
+  }
+</style>--> <section class="text-gray-50 bg-verdea bg-[url('/autumn.svg')] py-16"> <div class="container mx-auto px-4 text-center"> <!-- Título de la sección --> <h2 class="text-3xl font-bold mb-4">Nuestros Servicios</h2> <p class="text-gray-200 mb-12">
+Ven a probar la mejor pizzería de Zarautz
+</p> <!-- Servicios --> <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> <!-- Servicio 1 --> <div class="flex flex-col items-center"> <img src="/food-svgrepo-com.svg" alt="Healthy Foods" class="text-white h-16 w-16 mx-auto mb-4"> <h3 class="text-xl font-bold mt-4">Masa Madre</h3> <p class="text-gray-200 mt-2">
+Nuestras pizzas son elaboradas con masa madre libre de transgénicos.
+</p> </div> <!-- Servicio 2 --> <div class="flex flex-col items-center"> <img src="/delivery-motorbike-svgrepo-com.svg" alt="Fastest Delivery" class="h-16 w-16 mx-auto mb-4"> <h3 class="text-xl font-bold mt-4">Reparto a Domicilio</h3> <p class="text-gray-200 mt-2">
+Repartimos por la población de Zarautz, llámanos al <a class="text-white text-xl hover:text-blue-700" href="tel:943 01 66 93">943 01 66 93</a> </p> </div> <!-- Servicio 3 --> <div class="flex flex-col items-center"> <img src="/pizza-svgrepo-com.svg" alt="Original Recipes" class="h-16 w-16 mx-auto mb-4"> <h3 class="text-xl font-bold mt-4">Pizzas Caseras</h3> <p class="text-gray-200 mt-2">
+Gran variedad de Pizzas Caseras de masa fina, puedes veras desde
+            nuestra <a class="text-white hover:text-blue-700" href="/menu">carta</a> </p> </div> </div> </div> </section>  </main> <footer class="bg-black text-white py-8"> <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16"> <!-- Sección 1: Información de la Empresa --> <div> <h3 class="text-lg font-bold mb-4">Artea Pizzería</h3> <p class="text-sm text-gray-400">
+Disfruta de las mejores pizzas artesanales, preparadas con massa madre,
+        sin trasgénicos.
+</p> <p class="text-sm text-gray-400 mt-4">Teléfono: 943 01 66 93</p> <p class="text-sm text-gray-400 mt-4">cl Zigordia 32, Zarautz, Spain</p> </div> <div></div> <!-- Sección 3: Redes Sociales --> <div class="text-right"> <h3 class="text-lg font-bold mb-4">Nuestras valoraciones:</h3> <div class="flex justify-end space-x-4"> <!-- Facebook --> <a href="https://www.facebook.com/profile.php?id=100063544181740&sk=reviews" target="_blank" class="text-gray-400 hover:text-white"> <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"> <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.65 9.12 8.42 9.88v-7H7v-3h3.42V9.59c0-2.62 1.59-4.09 4.02-4.09 1.16 0 2.37.21 2.37.21v2.6h-1.34c-1.32 0-1.73.82-1.73 1.67v2H16l-.5 3H13.5v7C18.35 21.12 22 16.99 22 12z"></path> </svg> </a> <!-- Google --> <a href="https://www.google.com/search?q=google+pizzeria+artea" target="_blank" class="text-gray-400 hover:text-white"> <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"> <path d="M44.5 20H24v8.5h11.9C34.3 33.2 30 36.6 24 36.6c-6.5 0-12-5.4-12-12s5.5-12 12-12c2.9 0 5.4 1 7.4 2.7L37 8.4C33.3 5.7 29 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c10.2 0 18.4-7.1 19.8-16.5.2-1.1.2-2.5.2-3.5z"></path> </svg> </a> <!-- Tripadvisor --> <a href="https://www.tripadvisor.es/Restaurant_Review" target="_blank" class="text-gray-400 hover:text-white"> <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"> <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"></path> </svg> </a> </div> </div> </div> <!-- Copyright --> <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400"> <p>
+Diseñado 👨🏻‍💻 por
+<a href="mailto:santi.martinez.gomez88@gmail.com" target="_blank" class="text-verdea hover:underline">
+Santi Martínez.
+</a> </p> </div> <!-- Please refer: https://github.com/shubhamjain/svg-loader --> </footer> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- <script src="../../src/js/jquery.min.js"></script>
+  <script src="../../src/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../src/js/popper.min.js"></script>
+  <script src="../../src/js/bootstrap.min.js"></script>
+  <script src="../../src/js/jquery.easing.1.3.js"></script>
+  <script src="../../src/js/jquery.waypoints.min.js"></script>
+  <script src="../../src/js/jquery.stellar.min.js"></script>
+  <script src="../../src/js/owl.carousel.min.js"></script>
+  <script src="../../src/js/jquery.magnific-popup.min.js"></script>
+  <script src="../../src/js/aos.js"></script>
+  <script src="../../src/js/jquery.animateNumber.min.js"></script>
+  <script src="../../src/js/bootstrap-datepicker.js"></script>
+  <script src="../../src/js/jquery.timepicker.min.js"></script>
+  <script src="../../src/js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"
+  ></script>
+  <script src="../../src/js/google-map.js"></script>
+  <script src="../../src/js/main.js"></script>--> </body></html>

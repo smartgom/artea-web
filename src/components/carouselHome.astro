@@ -1,0 +1,140 @@
+---
+import Swiper from "swiper/bundle";
+import "swiper/swiper-bundle.css";
+
+const slides = [
+  {
+    src: "/porciones2.jpg",
+    alt: "porciones",
+    title: "Venta de porciones y raciones",
+    description: "Servimos porciones de nuestras pizzas más vendidas sueltas.",
+    interval: 3000,
+  },
+  {
+    src: "/pasta_vegana.jpg",
+    alt: "vegana",
+    title: "Opciones veganas",
+    description:
+      "Tenemos una buena variedad de pastas y pizzas veganas en nuestra carta.",
+    interval: 3000,
+  },
+  {
+    src: "/burger-1.jpg",
+    alt: "hamburguesa",
+    title: "Hamburguesas",
+    description:
+      "Prueba nuestras hamburguesas con la carne de la mejor calidad.",
+    interval: 3000,
+  },
+];
+---
+
+<div class="swiper w-full h-[500px] relative">
+    <div class="swiper-wrapper">
+      {slides.map((slide) => (
+        <div class="swiper-slide relative">
+          <img
+            src={slide.src}
+            alt={slide.alt}
+            class="w-full h-full object-cover"
+          />
+          <!-- Texto centrado en columna -->
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-black/30">
+            <h3 class="text-white text-2xl font-bold drop-shadow-lg">
+              {slide.title}
+            </h3>
+            <p class="text-white text-lg drop-shadow-md mt-2">
+              {slide.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+  
+<script>
+  import Swiper from "swiper/bundle";
+
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<!-- 
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    {
+      slides.map((slide, index) => (
+        <div
+          class={`carousel-item ${index === 0 ? "active" : ""}`}
+          data-bs-interval={slide.interval}
+        >
+          <img src={slide.src} class="d-block w-100" alt={slide.alt} />
+          <div class="carousel-caption text-shadow">
+            <h3>{slide.title}</h3>
+            <p>{slide.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+<!-- <style>
+  .carousel-inner {
+    height: 300px !important; /* Altura fija para el carrusel */
+  }
+
+  .carousel-inner img {
+    width: 100% !important; /* Ocupa todo el ancho */
+    height: 300px !important; /* Ajusta la altura */
+    object-fit: cover !important; /* Recorta la imagen para que se ajuste al contenedor */
+  }
+
+  .text-shadow {
+    color: white; /* Texto blanco */
+    text-shadow:
+      1px 1px 2px rgba(0, 0, 0, 0.6),
+      -1px -1px 2px rgba(0, 0, 0, 0.4);
+  }
+</style>-->

@@ -1,0 +1,46 @@
+---
+// MenuSection.astro
+
+const { sectionName, items } = Astro.props;
+---
+
+<div class="py-16">
+  <div class="container mx-auto px-4 text-center text-white">
+    <!-- Título de la sección -->
+    <h1 class="text-verdea mb-12 font-extrabold">{sectionName}</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Menú -->
+      {
+        items.map((item) => (
+          <div class="flex items-center justify-between border-b border-gray-300 pb-4">
+            <div class="flex items-left">
+              <div class="text-left">
+                <h3 class="text-rojo text-lg font-bold flex">
+                  {item.number + " - " + item.name}
+                  {/* Ícono vegano */}
+                  {item.vegan && (
+                    <img
+                      src="/vegan-svgrepo-com.svg"
+                      alt="Vegan Icon"
+                      class="h-5 w-5 ml-2 inline-block"
+                    />
+                  )}
+                </h3>
+                <p class="text-white text-sm">{item.ingredientsEuskera}</p>
+                <p class="text-white text-sm font-extrabold">
+                  {item.ingredientsCastellano}
+                </p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="w-20 h-10 flex items-center justify-center text-lg font-bold bg-verdea text-white rounded-lg ml-3">
+                {item.price} €
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

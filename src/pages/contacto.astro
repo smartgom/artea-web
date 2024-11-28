@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto">
+  <section class="bg-menu-texture text-white py-16">
+    <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Información de Contacto -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4">CONTÁCTANOS</h2>
+        <p class="text-gray-400 mb-8">
+          Nos encantaría saber de ti. Aquí tienes nuestra información de
+          contacto:
+        </p>
+        <div class="space-y-4">
+          <p>
+            <span class="font-bold">Dirección:</span>
+            Zigordia Kalea, 32, 20800 Zarautz, Gipuzkoa
+          </p>
+          <p>
+            <span class="font-bold">Teléfono:</span>
+            <a href="tel:943 01 66 93" class="text-verdea hover:underline"
+              >943 016 693</a
+            > -
+            <a href="tel:943 582 595" class="text-verdea hover:underline">
+              943 582 595</a
+            >
+          </p>
+          <p>
+            <span class="font-bold">Correo:</span>
+            <a
+              href="mailto:info@arteapizzeria.com"
+              class="text-verdea hover:underline">arteapizzeria@gmail.com</a
+            >
+          </p>
+          <p>
+            <span class="font-bold">Website:</span>
+            <a
+              href="https://arteapizzeria.com"
+              target="_blank"
+              class="text-verdea hover:underline">arteapizzeria.com</a
+            >
+          </p>
+          <p>
+            <span class="font-bold">Horario:</span>
+          </p>
+          <ul class="text-gray-400 ml-4 space-y-1">
+            <li>
+              <span class="font-bold text-white">Lunes:</span> 18:30–22:30
+            </li>
+            <li><span class="font-bold text-white">Martes:</span> Cerrado</li>
+            <li>
+              <span class="font-bold text-white">Miércoles:</span> 18:30–22:30
+            </li>
+            <li>
+              <span class="font-bold text-white">Jueves:</span> 18:30–22:30
+            </li>
+            <li>
+              <span class="font-bold text-white">Viernes:</span> 18:30–23:00
+            </li>
+            <li>
+              <span class="font-bold text-white">Sábado:</span> 18:30–23:00
+            </li>
+            <li>
+              <span class="font-bold text-white">Domingo:</span> 18:30–22:45
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.400984108623!2d-2.1732697!3d43.2849237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51c8435deaaaab%3A0x94f5c81491195dc1!2sPizzer%C3%ADa%20Artea!5e0!3m2!1ses!2ses!4v1732726051175!5m2!1ses!2ses"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mt-4">
+          <a
+            href="https://maps.app.goo.gl/S2WRkGN8pXRtgFei7"
+            target="_blank"
+            class="bg-verdea text-white px-6 py-2 rounded-lg shadow-lg hover:bg-rojo"
+          >
+            Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

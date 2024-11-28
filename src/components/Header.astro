@@ -1,0 +1,78 @@
+---
+const links = [
+  { href: "/", text: "Inicio" },
+  { href: "/menu", text: "Menú" },
+  { href: "/contacto", text: "Contacto" },
+];
+---
+
+<header>
+  <nav class="bg-black text-white">
+    <div
+      class="container mx-auto px-4 flex items-center justify-between h-auto"
+    >
+      <!-- Logo -->
+      <a href="/" class="text-xl font-bold">
+        <img src="/logo-artea.png" alt="Logo" class="h-24 w-auto" />
+      </a>
+
+      <!-- Botón del menú móvil -->
+      <button
+        id="menu-toggle"
+        class="block md:hidden text-gray-300 hover:text-verdea focus:outline-none"
+      >
+        <svg
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Links del menú -->
+      <div id="menu" class="hidden md:flex space-x-4 text-sm font-medium">
+        {
+          links.map((link) => (
+            <a
+              class={`block w-full py-2 hover:text-gray-400 text-lg ${
+                Astro.url.pathname === link.href ? "text-verdea font-bold" : ""
+              }`}
+              href={link.href}
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden flex flex-col items-start bg-gray-700 text-sm font-medium space-y-2 px-4 pb-4"
+    >
+      {
+        links.map((link) => (
+          <a class="block w-full py-2 hover:text-verdea" href={link.href}>
+            {link.text}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
