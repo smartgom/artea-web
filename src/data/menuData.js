@@ -299,7 +299,7 @@ export const itemsPizza = [
       name: "CALZONE ARTEA",
       ingredientsEuskera: "Atun-a, zihazerba, tipula, gazta eta alioli-a.\n *Etxeko saltxak aukeran (Artea , alioli, curry eta onddo saltxa) \n*saltsa estra +0,75€ \n*salsa extra +0,75€ \n*pan 1,20€",
       ingredientsCastellano: "Atún, espinacas, cebolla, queso y alioli. \n *Salsas caseras a elegir (Artea, alioli, salsa de hongos y curry) \n *salsa extra +0,75€ \n *pan 1,20€",
-      price: "17,00",
+      price: "13,00",
     }
   ];
 
